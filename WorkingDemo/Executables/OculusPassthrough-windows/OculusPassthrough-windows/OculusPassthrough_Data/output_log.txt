@@ -1,0 +1,38 @@
+Initialize engine version: 4.5.2f1 (9abb1b59b47c)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 9.0c [nvd3dum.dll 9.18.13.3523]
+    Renderer: NVIDIA GeForce GTX 480
+    Vendor:   NVIDIA
+    VRAM:     1482 MB (via DXGI)
+    Caps:     Shader=30 DepthRT=1 NativeDepth=1 NativeShadow=1 DF16=0 INTZ=1 RAWZ=0 NULL=1 RESZ=0 SlowINTZ=0
+Begin MonoManager ReloadAssembly
+Platform assembly: C:\Users\Rift\Desktop\OculusPassthrough-master\Executables\OculusPassthrough-windows\OculusPassthrough-windows\OculusPassthrough_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\Rift\Desktop\OculusPassthrough-master\Executables\OculusPassthrough-windows\OculusPassthrough-windows\OculusPassthrough_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\Rift\Desktop\OculusPassthrough-master\Executables\OculusPassthrough-windows\OculusPassthrough-windows\OculusPassthrough_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\Rift\Desktop\OculusPassthrough-master\Executables\OculusPassthrough-windows\OculusPassthrough-windows\OculusPassthrough_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\Rift\Desktop\OculusPassthrough-master\Executables\OculusPassthrough-windows\OculusPassthrough-windows\OculusPassthrough_Data\Managed\LeapCSharp.NET3.5.dll (this message is harmless)
+Loading C:\Users\Rift\Desktop\OculusPassthrough-master\Executables\OculusPassthrough-windows\OculusPassthrough-windows\OculusPassthrough_Data\Managed\LeapCSharp.NET3.5.dll into Unity Child Domain
+- Completed reload, in  0.072 seconds
+desktop: 1280x1024 60Hz; virtual: 1280x1024 at 0,0
+<RI> Initializing input.
+<RI> Input initialized.
+Platform assembly: C:\Users\Rift\Desktop\OculusPassthrough-master\Executables\OculusPassthrough-windows\OculusPassthrough-windows\OculusPassthrough_Data\Managed\System.dll (this message is harmless)
+UnloadTime: 5.292222 ms
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+
+Unloading 6390 unused Assets to reduce memory usage. Loaded Objects now: 1123.
+Total: 33.708405 ms (FindLiveObjects: 0.410177 ms CreateObjectMapping: 1.003689 ms MarkObjects: 0.187244 ms  DeleteObjects: 31.382271 ms)
+
+UnloadTime: 2.261111 ms
+Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+
+Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 1123.
+Total: 0.759244 ms (FindLiveObjects: 0.044977 ms CreateObjectMapping: 0.022488 ms MarkObjects: 0.162800 ms  DeleteObjects: 0.005866 ms)
+
+UnloadTime: 7.279556 ms
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+
+Unloading 18234 unused Assets to reduce memory usage. Loaded Objects now: 1123.
+Total: 109.856766 ms (FindLiveObjects: 2.036711 ms CreateObjectMapping: 3.716533 ms MarkObjects: 0.281111 ms  DeleteObjects: 103.174637 ms)
+

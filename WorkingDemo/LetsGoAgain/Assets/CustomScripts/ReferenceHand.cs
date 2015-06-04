@@ -11,6 +11,7 @@ public class ReferenceHand : MonoBehaviour {
 	public Transform pairedObj = null;
 	public bool isCounting = false;
 	public Timers timer;
+	public Transform closestObj = null;
 
 	void Awake () {
 		float timerLength = float.Parse(GameObject.Find ("TimerLenValue").GetComponent<Text> ().text.ToString ());

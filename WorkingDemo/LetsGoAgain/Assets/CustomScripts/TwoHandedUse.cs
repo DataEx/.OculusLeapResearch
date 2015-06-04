@@ -14,14 +14,19 @@ public class TwoHandedUse : MonoBehaviour {
 	public GameObject grabbingObj = null;
 	Transform grabbingObjParent = null;
 	GameObject sphere;
+	GameObject rotateHelper;
 	float prevDist = -1;
-	Quaternion prevHandRotation;
+	Vector3 prevHandToObjVec = Vector3.zero;
+	Quaternion prevSphereRotation;
+	Vector3 curHandToObjVec;
 
 	void Awake () {
 		sphere = this.transform.GetChild (0).gameObject;
 		Color startColor = sphere.GetComponent<Renderer>().material.color;
 		sphere.GetComponent<Renderer>().material.color = new Color (startColor.r, startColor.g, startColor.b, 0.4f);
-
+		rotateHelper = new GameObject ();
+		rotateHelper.name = "RotateHelper";
+		rotateHelper.transform.parent = this.transform;
 	}
 
 	// Creates a viewable environment for scaling the grabbable object and does the calculations for it 
@@ -40,43 +45,67 @@ public class TwoHandedUse : MonoBehaviour {
 		sphere.GetComponent<Renderer>().enabled = true;
 		prevDist = dist;
 	}
+	void resetVariables(){
+		sphere.GetComponent<Renderer>().enabled = false;
+		grabbingHand = null;
+		closestHand = null;
+		sphere.transform.parent = this.transform;
+		prevDist = -1;
+		grabbingObj = null;
+		prevHandToObjVec = Vector3.zero;
+		grabbingObjParent = null;
+		systemOn = false;
+	}
 
 	// Does the calculations for the rotation of the scaling object
 	void setupTwoHandedRotation(){
-//		grabbingObj.transform.rotation = closestHand.transform.rotation;
-		Vector3 vec = grabbingObj.transform.position - closestHand.transform.position;
-		grabbingObj.transform.rotation = Quaternion.LookRotation(vec);
+		rotateHelper.transform.position = grabbingObj.transform.position;
+		// Draw line between the two objects
+		if (prevHandToObjVec == Vector3.zero) {
+			prevHandToObjVec = grabbingObj.transform.position - closestHand.transform.position;
+			prevSphereRotation = rotateHelper.transform.rotation; 
+		} 
+		else {
+			curHandToObjVec = grabbingObj.transform.position - closestHand.transform.position;
+			grabbingObj.transform.rotation = Quaternion.FromToRotation(prevHandToObjVec, curHandToObjVec);
+		}
 	}
 
 	// Updates variables determining if two handed transformations can be applied
 	void Update () {
 			if (systemOn) {
-				if (grabbingHand != null && closestHand != null && grabbingHand.transform.parent.childCount != 1){
-					setupTwoHandedScaling ();
+				if (grabbingHand != null && closestHand != null){
+					if(grabbingHand.transform.parent.childCount == 1){
+						setupTwoHandedScaling ();
+					}
+					else if(grabbingHand.transform.parent.childCount == 2){
+						setupTwoHandedRotation ();
+					}
 				} 
 				else{
 					systemOn = false;
 				}	
 			}
 			else {
+				resetVariables();
 				GameObject[] listOfHands = GameObject.FindGameObjectsWithTag ("Hand");
-				sphere.GetComponent<Renderer>().enabled = false;
-				grabbingHand = null;
-				closestHand = null;
-				sphere.transform.parent = this.transform;
-//				if(grabbingObj != null){
-//					grabbingObj.transform.parent = grabbingObjParent;
-//				}
-				prevDist = -1;
-				grabbingObj = null;
-				grabbingObjParent = null;
-				systemOn = false;
 				int grabbingHandIndex = -1;
 				for (int i = 0; i<listOfHands.Length; i++) {
-						if (listOfHands [i].transform.parent.childCount == 2) {
-								grabbingHand = listOfHands [i];
-								grabbingHandIndex = i;
-						}
+					Transform closestObj = listOfHands[i].GetComponent<ReferenceHand>().closestObj;
+					if(closestObj != null && listOfHands[i].transform.parent.childCount != 2){
+						grabbingHand = listOfHands [i];
+						grabbingHandIndex = i;
+						grabbingObj = closestObj.gameObject;
+						grabbingObjParent = closestObj.parent;
+
+					}
+					else if(listOfHands[i].transform.parent.childCount == 2){
+						grabbingHand = listOfHands [i];
+						grabbingHandIndex = i;
+						grabbingObj = grabbingHand.GetComponent<ReferenceHand>().pairedObj.gameObject;
+						grabbingObjParent = grabbingHand.GetComponent<ReferenceHand>().childsParent;
+					}
+					break;
 				}
 				if (grabbingHandIndex != -1 && grabbingHand != null && listOfHands.Length >= 2) {
 						// Now that one hand is sucessfully grabbing an object and another to use
@@ -101,16 +130,14 @@ public class TwoHandedUse : MonoBehaviour {
 
 						}
 						closestHand = listOfHands [closestHandIndex];
-						grabbingObj = grabbingHand.transform.parent.GetChild (1).gameObject;
-						grabbingObjParent = grabbingHand.GetComponent<ReferenceHand> ().childsParent;
 			}
 			}
 			// if systemOn is false and the rest of the hands are recognized, then do rotation
-			if (grabbingHand != null && closestHand != null && grabbingHand.transform.parent.childCount != 1) {
-				if(systemOn == false){
-					setupTwoHandedRotation ();
-				}
-			}
+//			if (grabbingHand != null && closestHand != null && grabbingHand.transform.parent.childCount != 1) {
+//				if(systemOn == false){
+//					setupTwoHandedRotation ();
+//				}
+//			}
 	}
 }
 	

@@ -332,11 +332,13 @@ public class TrackHand {
 			bool useTwoHanded = twoHanded.GetComponent<TwoHandedUse>().useTwoHanded;
 			bool hasClosestHand = false;
 			bool hasGrabbingObj = false;
+			bool systemOn = false;
 			if(useTwoHanded){
 				hasClosestHand  = twoHanded.GetComponent<TwoHandedUse>().closestHand != null;
 				hasGrabbingObj  = twoHanded.GetComponent<TwoHandedUse>().grabbingObj != null;
+				systemOn  = twoHanded.GetComponent<TwoHandedUse>().systemOn;
 			}
-			if ((useTwoHanded && hasClosestHand && hasGrabbingObj) == false) {
+			if ((useTwoHanded && hasClosestHand && hasGrabbingObj && systemOn) == false) {
 				return true;
 			}
 			else{
@@ -388,13 +390,16 @@ public class TrackHand {
 				}
 				closestCube = canGrabList[closestIndex];
 				if(distFromCube [closestIndex] <= maxConnectingDistance){
+					referenceHand.GetComponent<ReferenceHand>().closestObj = closestCube;
 					return closestCube;
 				}
 				else{
+					referenceHand.GetComponent<ReferenceHand>().closestObj = null;
 					return null;
 				}
 			}
 			else{
+					referenceHand.GetComponent<ReferenceHand>().closestObj = null;
 				return null;
 			}
 		}

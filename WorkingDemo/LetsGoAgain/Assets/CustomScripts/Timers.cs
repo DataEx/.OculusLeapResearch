@@ -9,15 +9,12 @@ public class Timers {
 	public float scale;
 	public GameObject targetCopy = null;
 	public float startTime;
-//	public GameObject headerObj = GameObject.CreatePrimitive (PrimitiveType.Cube);
-//	public GameObject footerObj = GameObject.CreatePrimitive (PrimitiveType.Cube);
 	public GameObject[] counterObjs;
 	public bool[] isVisible; 
 	public Transform parent = null;
 	public bool makeVisible = false;
 
 	int percentageComplete = 0;
-	//public GameObject outlineObj; 
 	public Timers(GameObject targetObj, float timerLen, float scalingNumber){
 		counterObjs = new GameObject[10];
 		target = targetObj;
@@ -27,6 +24,8 @@ public class Timers {
 		timerLength = timerLen;
 		scale = scalingNumber;
 		float xCoor = target.transform.position.z  + scale;
+		Shader shader = Shader.Find ("Specular");
+		// Instantiates the phyiscial timer objects 
 		for (int i = 0; i<counterObjs.Length; i++) {
 			counterObjs[i] = GameObject.CreatePrimitive (PrimitiveType.Cylinder);
 			counterObjs[i].GetComponent<Collider>().enabled = false;
@@ -35,10 +34,11 @@ public class Timers {
 			counterObjs[i].transform.localScale 	= new Vector3 (counterObjs[i].transform.localScale.x*0.3f, counterObjs[i].transform.localScale.y*0.1f,counterObjs[i].transform.localScale.z*0.3f);
 			counterObjs[i].transform.parent = targetCopy.transform;
 			counterObjs[i].GetComponent<Renderer>().material.color  = Color.grey;
+			counterObjs[i].GetComponent<MeshRenderer>().material = new Material(shader);
 		}
-		pointer = GameObject.Find ("CameraLeft");
 	}
 	
+	// Resets and startss the timer from 0% completion
 	public void startTimer(){
 		if(makeVisible == false){
 			makeVisible = true;
@@ -51,7 +51,7 @@ public class Timers {
 		}
 	}
 	
-	
+	// Stops the timer at its current percentage and resets it
 	public void stopTimer(){
 		makeVisible = false;
 		if (counterObjs[counterObjs.Length-1].GetComponent<Renderer>().material.color == Color.green) {
@@ -72,9 +72,10 @@ public class Timers {
 	}
 	
 	public bool timerHasStarted(){
-		return makeVisible;//headerObj.renderer.enabled;
+		return makeVisible;
 	}
-	// Update is called once per frame
+
+	// Updates timer objects position and colors
 	public void updateObj () {
 		targetCopy.transform.position = target.transform.position;
 		targetCopy.transform.localScale = target.transform.localScale;

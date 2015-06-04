@@ -2,13 +2,13 @@
 using System.Collections;
 using Leap;
 using System;
+using System.Collections.Generic;
 
 public class TwoHandedUse : MonoBehaviour {
 
+
 	public bool useTwoHanded = false; // Check in Unity to decide whether we want to use 2-handed
 	public bool systemOn = false; // Let's us know if system is ready 
-//	GameObject[] listOfHands;
-	// Use this for initialization
 	GameObject grabbingHand = null;
 	public GameObject closestHand  = null;
 	public GameObject grabbingObj = null;
@@ -23,65 +23,33 @@ public class TwoHandedUse : MonoBehaviour {
 		sphere.GetComponent<Renderer>().material.color = new Color (startColor.r, startColor.g, startColor.b, 0.4f);
 
 	}
+
+	// Creates a viewable environment for scaling the grabbable object and does the calculations for it 
 	void setupTwoHandedScaling(){
-		Debug.Log (grabbingHand.transform.parent.GetChild (1).gameObject.name);
-//		grabbingObj = grabbingHand.transform.parent.GetChild (1).gameObject;
-//		grabbingObjParent = grabbingHand.GetComponent<ReferenceHand> ().childsParent;
 		float dist = Vector3.Distance (grabbingHand.transform.position, closestHand.transform.position);
 		sphere.transform.localScale = new Vector3 (2*dist, 2*dist, 2*dist);
 		if (prevDist != -1) {
-//			Debug.Log ("Scaling");
 			float changeInScale = (dist - prevDist)/prevDist;
-			Debug.Log ("diff dist: " + (dist-prevDist).ToString());
-			//			Debug.Log ("dist: " + dist.ToString());
-//			Debug.Log ("changeInScale: " + changeInScale.ToString());
-
-			//dist > prevDist --> larger circle --> scale object larger
 			Vector3 currentScale = grabbingObj.transform.localScale;
 			float factor;
 			factor = (1+changeInScale);
 			factor = (float)Math.Pow(factor,5);
-			Debug.Log ("factor: " + factor.ToString());
 			grabbingObj.transform.localScale = new Vector3((factor)*currentScale.x,(factor)*currentScale.y,(factor)*currentScale.z);
 		}
-//		if (grabbingObj.transform.parent != sphere.transform) {
-
-//			sphere.transform.parent = closestHand.transform;
-//			grabbingObj.transform.parent = sphere.transform;
-//		}
 		sphere.transform.position = grabbingObj.transform.position;
 		sphere.GetComponent<Renderer>().enabled = true;
 		prevDist = dist;
-//		closestHand.renderer.material.color = Color.blue;
-		// change color of 2nd hand
-		// if 2nd hand pinches
-		// activate if 2nd hand pinches? use timer and everything
-
-		//draw ring around hand1 with hand2 at radius
-
-		//		Gizmos.color = Color.yellow;
-//		Gizmos.DrawSphere(grabbingHand.transform.position, dist);
-
-		// the movement of the grabbing hand will not act as normal, but is instead allowed to move freely(?)
-			// as long it stays in view
-		// as the cloestHand moves around the grabbingHand's obj, rotate the obj
-		// as the cloestHand moves closer/further to the obj, the obj scales accordingly 
-			// it may not be the object but rather a ghost of the obj
-		// Do we want to keep the changes in scale and rotation? Or is it for observation pruposes only
-
 	}
 
+	// Does the calculations for the rotation of the scaling object
 	void setupTwoHandedRotation(){
-		Debug.Log ("REPORTY");
-//		if (prevHandRotation != null) {
-			grabbingObj.transform.rotation = Quaternion.Inverse(closestHand.transform.rotation);			
-//		} 
-//		prevHandRotation = closestHand.transform.rotation;
+//		grabbingObj.transform.rotation = closestHand.transform.rotation;
+		Vector3 vec = grabbingObj.transform.position - closestHand.transform.position;
+		grabbingObj.transform.rotation = Quaternion.LookRotation(vec);
 	}
 
-	// Update is called once per frame
+	// Updates variables determining if two handed transformations can be applied
 	void Update () {
-//			Debug.Log("systemOn: " + systemOn.ToString());
 			if (systemOn) {
 				if (grabbingHand != null && closestHand != null && grabbingHand.transform.parent.childCount != 1){
 					setupTwoHandedScaling ();
@@ -132,7 +100,6 @@ public class TwoHandedUse : MonoBehaviour {
 								}
 
 						}
-						// maybe use a threshhold for closestHand?
 						closestHand = listOfHands [closestHandIndex];
 						grabbingObj = grabbingHand.transform.parent.GetChild (1).gameObject;
 						grabbingObjParent = grabbingHand.GetComponent<ReferenceHand> ().childsParent;

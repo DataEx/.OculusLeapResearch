@@ -1,0 +1,484 @@
+Initialize engine version: 5.0.1f1 (5a2e8fe35a68)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: Intel(R) HD Graphics Family (ID=0xa16)
+    Vendor:   Intel
+    VRAM:     896 MB
+Begin MonoManager ReloadAssembly
+Platform assembly: C:\Users\Seth\Desktop\Unity\LetsGoAgain\Tests\05_20_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\Seth\Desktop\Unity\LetsGoAgain\Tests\05_20_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\Seth\Desktop\Unity\LetsGoAgain\Tests\05_20_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\Seth\Desktop\Unity\LetsGoAgain\Tests\05_20_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\Seth\Desktop\Unity\LetsGoAgain\Tests\05_20_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\Seth\Desktop\Unity\LetsGoAgain\Tests\05_20_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: C:\Users\Seth\Desktop\Unity\LetsGoAgain\Tests\05_20_Data\Managed\LeapCSharp.NET3.5.dll (this message is harmless)
+Loading C:\Users\Seth\Desktop\Unity\LetsGoAgain\Tests\05_20_Data\Managed\LeapCSharp.NET3.5.dll into Unity Child Domain
+- Completed reload, in  0.077 seconds
+<RI> Initializing input.
+<RI> Input initialized.
+desktop: 1366x768 60Hz; virtual: 3286x1080 at 0,0
+<RI> Initialized touch support.
+Platform assembly: C:\Users\Seth\Desktop\Unity\LetsGoAgain\Tests\05_20_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: C:\Users\Seth\Desktop\Unity\LetsGoAgain\Tests\05_20_Data\Managed\System.dll (this message is harmless)
+The referenced script on this Behaviour is missing!
+ 
+(Filename:  Line: 1713)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 156)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 156)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 156)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 156)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 156)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 156)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 156)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 156)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 156)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 156)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 156)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 156)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 156)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 156)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 156)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 156)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 156)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 156)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 156)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 156)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 156)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 156)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 156)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 156)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 156)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 156)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 156)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 156)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 156)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 156)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 156)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 156)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 156)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 156)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 156)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 156)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 156)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 156)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 156)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 156)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 156)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 156)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 156)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 156)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 156)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 156)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 156)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 156)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 156)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 156)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 156)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 156)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 156)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 156)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 156)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 156)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 156)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 156)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 156)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 156)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 156)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 156)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 156)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 156)
+
+Can't add component 'MeshRenderer' to Cylinder because such a component is already added to the game object!
+ 
+(Filename:  Line: 87)
+
+Can't add component 'MeshRenderer' to Cylinder because such a component is already added to the game object!
+ 
+(Filename:  Line: 87)
+
+Can't add component 'MeshRenderer' to Cylinder because such a component is already added to the game object!
+ 
+(Filename:  Line: 87)
+
+Can't add component 'MeshRenderer' to Cylinder because such a component is already added to the game object!
+ 
+(Filename:  Line: 87)
+
+Can't add component 'MeshRenderer' to Cylinder because such a component is already added to the game object!
+ 
+(Filename:  Line: 87)
+
+Can't add component 'MeshRenderer' to Cylinder because such a component is already added to the game object!
+ 
+(Filename:  Line: 87)
+
+Can't add component 'MeshRenderer' to Cylinder because such a component is already added to the game object!
+ 
+(Filename:  Line: 87)
+
+Can't add component 'MeshRenderer' to Cylinder because such a component is already added to the game object!
+ 
+(Filename:  Line: 87)
+
+Can't add component 'MeshRenderer' to Cylinder because such a component is already added to the game object!
+ 
+(Filename:  Line: 87)
+
+Can't add component 'MeshRenderer' to Cylinder because such a component is already added to the game object!
+ 
+(Filename:  Line: 87)
+
+Can't add component 'MeshRenderer' to Sphere because such a component is already added to the game object!
+ 
+(Filename:  Line: 87)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 156)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 156)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 156)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 156)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 156)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 156)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 156)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 156)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 156)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 156)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 156)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 156)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 156)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 156)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 156)
+
+Crash!!!
+SymInit: Symbol-SearchPath: '.;C:\Users\Seth\Desktop\Unity\LetsGoAgain\Tests;C:\Users\Seth\Desktop\Unity\LetsGoAgain\Tests;C:\windows;C:\windows\system32;SRV*C:\websymbols*http://msdl.microsoft.com/download/symbols;', symOptions: 530, UserName: 'Seth'
+OS-Version: 6.2.9200 () 0x300-0x1
+C:\Users\Seth\Desktop\Unity\LetsGoAgain\Tests\05_20.exe:05_20.exe (00007FF72EFB0000), size: 19525632 (result: 0), SymType: '-exported-', PDB: 'C:\Users\Seth\Desktop\Unity\LetsGoAgain\Tests\05_20.exe', fileVersion: 5.0.1.11919
+C:\windows\SYSTEM32\ntdll.dll:ntdll.dll (00007FFC55850000), size: 1728512 (result: 0), SymType: '-exported-', PDB: 'C:\windows\SYSTEM32\ntdll.dll', fileVersion: 6.3.9600.17278
+C:\windows\system32\KERNEL32.DLL:KERNEL32.DLL (00007FFC54E10000), size: 1286144 (result: 0), SymType: '-exported-', PDB: 'C:\windows\system32\KERNEL32.DLL', fileVersion: 6.3.9600.17056
+C:\windows\system32\KERNELBASE.dll:KERNELBASE.dll (00007FFC52CF0000), size: 1110016 (result: 0), SymType: '-exported-', PDB: 'C:\windows\system32\KERNELBASE.dll', fileVersion: 6.3.9600.17278
+C:\windows\SYSTEM32\HID.DLL:HID.DLL (00007FFC51E00000), size: 53248 (result: 0), SymType: '-exported-', PDB: 'C:\windows\SYSTEM32\HID.DLL', fileVersion: 6.3.9600.16384
+C:\windows\system32\WS2_32.dll:WS2_32.dll (00007FFC55250000), size: 360448 (result: 0), SymType: '-exported-', PDB: 'C:\windows\system32\WS2_32.dll', fileVersion: 6.3.9600.16384
+C:\windows\system32\USER32.dll:USER32.dll (00007FFC54C90000), size: 1511424 (result: 0), SymType: '-exported-', PDB: 'C:\windows\system32\USER32.dll', fileVersion: 6.3.9600.17031
+C:\windows\SYSTEM32\VERSION.dll:VERSION.dll (00007FFC4C9F0000), size: 40960 (result: 0), SymType: '-exported-', PDB: 'C:\windows\SYSTEM32\VERSION.dll', fileVersion: 6.3.9600.16384
+C:\windows\system32\ole32.dll:ole32.dll (00007FFC552C0000), size: 1540096 (result: 0), SymType: '-exported-', PDB: 'C:\windows\system32\ole32.dll', fileVersion: 6.3.9600.17042
+C:\windows\system32\SHLWAPI.dll:SHLWAPI.dll (00007FFC55540000), size: 331776 (result: 0), SymType: '-exported-', PDB: 'C:\windows\system32\SHLWAPI.dll', fileVersion: 6.3.9600.16384
+C:\windows\system32\ADVAPI32.dll:ADVAPI32.dll (00007FFC54BE0000), size: 675840 (result: 0), SymType: '-exported-', PDB: 'C:\windows\system32\ADVAPI32.dll', fileVersion: 6.3.9600.17031
+C:\windows\system32\GDI32.dll:GDI32.dll (00007FFC54A90000), size: 1327104 (result: 0), SymType: '-exported-', PDB: 'C:\windows\system32\GDI32.dll', fileVersion: 6.3.9600.17246
+C:\windows\system32\SHELL32.dll:SHELL32.dll (00007FFC53360000), size: 21032960 (result: 0), SymType: '-exported-', PDB: 'C:\windows\system32\SHELL32.dll', fileVersion: 6.3.9600.17278
+C:\windows\SYSTEM32\OPENGL32.dll:OPENGL32.dll (00007FFC44760000), size: 1183744 (result: 0), SymType: '-exported-', PDB: 'C:\windows\SYSTEM32\OPENGL32.dll', fileVersion: 6.3.9600.16384
+C:\windows\SYSTEM32\WINMM.dll:WINMM.dll (00007FFC4FF50000), size: 126976 (result: 0), SymType: '-exported-', PDB: 'C:\windows\SYSTEM32\WINMM.dll', fileVersion: 6.3.9600.16384
+C:\windows\system32\OLEAUT32.dll:OLEAUT32.dll (00007FFC55730000), size: 749568 (result: 0), SymType: '-exported-', PDB: 'C:\windows\system32\OLEAUT32.dll', fileVersion: 6.3.9600.16506
+C:\windows\SYSTEM32\MSACM32.dll:MSACM32.dll (00007FFC3B1B0000), size: 110592 (result: 0), SymType: '-exported-', PDB: 'C:\windows\SYSTEM32\MSACM32.dll', fileVersion: 6.3.9600.16384
+C:\windows\system32\IMM32.dll:IMM32.dll (00007FFC555A0000), size: 212992 (result: 0), SymType: '-exported-', PDB: 'C:\windows\system32\IMM32.dll', fileVersion: 6.3.9600.17031
+C:\windows\SYSTEM32\DNSAPI.dll:DNSAPI.dll (00007FFC52240000), size: 667648 (result: 0), SymType: '-exported-', PDB: 'C:\windows\SYSTEM32\DNSAPI.dll', fileVersion: 6.3.9600.17039
+C:\windows\SYSTEM32\IPHLPAPI.DLL:IPHLPAPI.DLL (00007FFC4D710000), size: 167936 (result: 0), SymType: '-exported-', PDB: 'C:\windows\SYSTEM32\IPHLPAPI.DLL', fileVersion: 6.3.9600.16384
+C:\windows\SYSTEM32\WINHTTP.dll:WINHTTP.dll (00007FFC45E50000), size: 806912 (result: 0), SymType: '-exported-', PDB: 'C:\windows\SYSTEM32\WINHTTP.dll', fileVersion: 6.3.9600.16384
+C:\windows\system32\msvcrt.dll:msvcrt.dll (00007FFC530E0000), size: 684032 (result: 0), SymType: '-exported-', PDB: 'C:\windows\system32\msvcrt.dll', fileVersion: 7.0.9600.16384
+C:\windows\system32\NSI.dll:NSI.dll (00007FFC55240000), size: 36864 (result: 0), SymType: '-exported-', PDB: 'C:\windows\system32\NSI.dll', fileVersion: 6.3.9600.16384
+C:\windows\system32\RPCRT4.dll:RPCRT4.dll (00007FFC555F0000), size: 1273856 (result: 0), SymType: '-exported-', PDB: 'C:\windows\system32\RPCRT4.dll', fileVersion: 6.3.9600.17216
+C:\windows\SYSTEM32\combase.dll:combase.dll (00007FFC55060000), size: 1925120 (result: 0), SymType: '-exported-', PDB: 'C:\windows\SYSTEM32\combase.dll', fileVersion: 6.3.9600.17031
+C:\windows\SYSTEM32\sechost.dll:sechost.dll (00007FFC557F0000), size: 356352 (result: 0), SymType: '-exported-', PDB: 'C:\windows\SYSTEM32\sechost.dll', fileVersion: 6.3.9600.16384
+C:\windows\SYSTEM32\GLU32.dll:GLU32.dll (00007FFC44730000), size: 180224 (result: 0), SymType: '-exported-', PDB: 'C:\windows\SYSTEM32\GLU32.dll', fileVersion: 6.3.9600.16384
+C:\windows\SYSTEM32\DDRAW.dll:DDRAW.dll (00007FFC44630000), size: 999424 (result: 0), SymType: '-exported-', PDB: 'C:\windows\SYSTEM32\DDRAW.dll', fileVersion: 6.3.9600.16384
+C:\windows\SYSTEM32\WINMMBASE.dll:WINMMBASE.dll (00007FFC4FF20000), size: 172032 (result: 0), SymType: '-exported-', PDB: 'C:\windows\SYSTEM32\WINMMBASE.dll', fileVersion: 6.3.9600.16384
+C:\windows\system32\MSCTF.dll:MSCTF.dll (00007FFC54950000), size: 1282048 (result: 0), SymType: '-exported-', PDB: 'C:\windows\system32\MSCTF.dll', fileVersion: 6.3.9600.17031
+C:\windows\SYSTEM32\WINNSI.DLL:WINNSI.DLL (00007FFC4D6F0000), size: 40960 (result: 0), SymType: '-exported-', PDB: 'C:\windows\SYSTEM32\WINNSI.DLL', fileVersion: 6.3.9600.16384
+C:\windows\SYSTEM32\DCIMAN32.dll:DCIMAN32.dll (00007FFC44620000), size: 36864 (result: 0), SymType: '-exported-', PDB: 'C:\windows\SYSTEM32\DCIMAN32.dll', fileVersion: 6.3.9600.16384
+C:\windows\SYSTEM32\cfgmgr32.dll:cfgmgr32.dll (00007FFC52CA0000), size: 303104 (result: 0), SymType: '-exported-', PDB: 'C:\windows\SYSTEM32\cfgmgr32.dll', fileVersion: 6.3.9600.16384
+C:\windows\SYSTEM32\DEVOBJ.dll:DEVOBJ.dll (00007FFC51A50000), size: 155648 (result: 0), SymType: '-exported-', PDB: 'C:\windows\SYSTEM32\DEVOBJ.dll', fileVersion: 6.3.9600.16384
+C:\windows\SYSTEM32\shcore.dll:shcore.dll (00007FFC51330000), size: 651264 (result: 0), SymType: '-exported-', PDB: 'C:\windows\SYSTEM32\shcore.dll', fileVersion: 6.3.9600.17031
+C:\Users\Seth\Desktop\Unity\LetsGoAgain\Tests\05_20_Data\Mono\mono.dll:mono.dll (00007FFC49CE0000), size: 2990080 (result: 0), SymType: '-exported-', PDB: 'C:\Users\Seth\Desktop\Unity\LetsGoAgain\Tests\05_20_Data\Mono\mono.dll'
+C:\windows\system32\PSAPI.DLL:PSAPI.DLL (00007FFC552B0000), size: 28672 (result: 0), SymType: '-exported-', PDB: 'C:\windows\system32\PSAPI.DLL', fileVersion: 6.3.9600.16384
+C:\windows\SYSTEM32\MSWSOCK.dll:MSWSOCK.dll (00007FFC52430000), size: 360448 (result: 0), SymType: '-exported-', PDB: 'C:\windows\SYSTEM32\MSWSOCK.dll', fileVersion: 6.3.9600.16384
+C:\windows\SYSTEM32\kernel.appcore.dll:kernel.appcore.dll (00007FFC51A80000), size: 40960 (result: 0), SymType: '-exported-', PDB: 'C:\windows\SYSTEM32\kernel.appcore.dll', fileVersion: 6.3.9600.16384
+C:\windows\SYSTEM32\CRYPTBASE.dll:CRYPTBASE.dll (00007FFC52A40000), size: 40960 (result: 0), SymType: '-exported-', PDB: 'C:\windows\SYSTEM32\CRYPTBASE.dll', fileVersion: 6.3.9600.16384
+C:\windows\SYSTEM32\bcryptPrimitives.dll:bcryptPrimitives.dll (00007FFC529E0000), size: 393216 (result: 0), SymType: '-exported-', PDB: 'C:\windows\SYSTEM32\bcryptPrimitives.dll', fileVersion: 6.3.9600.17031
+C:\windows\system32\uxtheme.dll:uxtheme.dll (00007FFC518A0000), size: 1183744 (result: 0), SymType: '-exported-', PDB: 'C:\windows\system32\uxtheme.dll', fileVersion: 6.3.9600.17031
+C:\windows\system32\dwmapi.dll:dwmapi.dll (00007FFC50A50000), size: 131072 (result: 0), SymType: '-exported-', PDB: 'C:\windows\system32\dwmapi.dll', fileVersion: 6.3.9600.17090
+C:\windows\SYSTEM32\d3d11.dll:d3d11.dll (00007FFC50830000), size: 2129920 (result: 0), SymType: '-exported-', PDB: 'C:\windows\SYSTEM32\d3d11.dll', fileVersion: 6.3.9600.17041
+C:\windows\SYSTEM32\dxgi.dll:dxgi.dll (00007FFC50530000), size: 520192 (result: 0), SymType: '-exported-', PDB: 'C:\windows\SYSTEM32\dxgi.dll', fileVersion: 6.3.9600.17201
+C:\windows\SYSTEM32\igd10iumd64.dll:igd10iumd64.dll (00007FFC4E8B0000), size: 21159936 (result: 0), SymType: '-exported-', PDB: 'C:\windows\SYSTEM32\igd10iumd64.dll', fileVersion: 10.18.10.3412
+C:\windows\SYSTEM32\bcrypt.dll:bcrypt.dll (00007FFC526C0000), size: 155648 (result: 0), SymType: '-exported-', PDB: 'C:\windows\SYSTEM32\bcrypt.dll', fileVersion: 6.3.9600.17031
+C:\windows\SYSTEM32\ncrypt.dll:ncrypt.dll (00007FFC52690000), size: 147456 (result: 0), SymType: '-exported-', PDB: 'C:\windows\SYSTEM32\ncrypt.dll', fileVersion: 6.3.9600.16384
+C:\windows\SYSTEM32\NTASN1.dll:NTASN1.dll (00007FFC52650000), size: 237568 (result: 0), SymType: '-nosymbols-', PDB: 'C:\windows\SYSTEM32\NTASN1.dll', fileVersion: 6.3.9600.16384
+C:\windows\SYSTEM32\igdusc64.dll:igdusc64.dll (00007FFC4DFC0000), size: 4501504 (result: 0), SymType: '-exported-', PDB: 'C:\windows\SYSTEM32\igdusc64.dll', fileVersion: 10.18.10.3412
+C:\windows\SYSTEM32\MMDevAPI.DLL:MMDevAPI.DLL (00007FFC4FE20000), size: 401408 (result: 0), SymType: '-exported-', PDB: 'C:\windows\SYSTEM32\MMDevAPI.DLL', fileVersion: 6.3.9600.17031
+C:\windows\SYSTEM32\wdmaud.drv:wdmaud.drv (00007FFC3B170000), size: 245760 (result: 0), SymType: '-exported-', PDB: 'C:\windows\SYSTEM32\wdmaud.drv', fileVersion: 6.3.9600.16384
+C:\windows\SYSTEM32\ksuser.dll:ksuser.dll (00007FFC4FFC0000), size: 32768 (result: 0), SymType: '-exported-', PDB: 'C:\windows\SYSTEM32\ksuser.dll', fileVersion: 6.3.9600.16384
+C:\windows\SYSTEM32\AVRT.dll:AVRT.dll (00007FFC50A40000), size: 45056 (result: 0), SymType: '-exported-', PDB: 'C:\windows\SYSTEM32\AVRT.dll', fileVersion: 6.3.9600.16384
+C:\windows\SYSTEM32\AUDIOSES.DLL:AUDIOSES.DLL (00007FFC4CD80000), size: 483328 (result: 0), SymType: '-exported-', PDB: 'C:\windows\SYSTEM32\AUDIOSES.DLL', fileVersion: 6.3.9600.17090
+C:\windows\SYSTEM32\powrprof.dll:powrprof.dll (00007FFC52B70000), size: 282624 (result: 0), SymType: '-exported-', PDB: 'C:\windows\SYSTEM32\powrprof.dll', fileVersion: 6.3.9600.17031
+C:\windows\SYSTEM32\msacm32.drv:msacm32.drv (00007FFC3B160000), size: 45056 (result: 0), SymType: '-exported-', PDB: 'C:\windows\SYSTEM32\msacm32.drv', fileVersion: 6.3.9600.16384
+C:\windows\SYSTEM32\midimap.dll:midimap.dll (00007FFC3B150000), size: 40960 (result: 0), SymType: '-exported-', PDB: 'C:\windows\SYSTEM32\midimap.dll', fileVersion: 6.3.9600.16384
+C:\windows\SYSTEM32\dsound.dll:dsound.dll (00007FFC3AD80000), size: 552960 (result: 0), SymType: '-exported-', PDB: 'C:\windows\SYSTEM32\dsound.dll', fileVersion: 6.3.9600.16384
+C:\windows\SYSTEM32\clbcatq.dll:clbcatq.dll (00007FFC54FB0000), size: 671744 (result: 0), SymType: '-exported-', PDB: 'C:\windows\SYSTEM32\clbcatq.dll', fileVersion: 2001.12.10530.16384
+C:\windows\SYSTEM32\xinput1_3.dll:xinput1_3.dll (0000000000400000), size: 122880 (result: 0), SymType: '-exported-', PDB: 'C:\windows\SYSTEM32\xinput1_3.dll', fileVersion: 9.18.944.0
+C:\windows\system32\SETUPAPI.dll:SETUPAPI.dll (00007FFC54770000), size: 1916928 (result: 0), SymType: '-exported-', PDB: 'C:\windows\system32\SETUPAPI.dll', fileVersion: 6.3.9600.17031
+C:\Users\Seth\Desktop\Unity\LetsGoAgain\Tests\05_20_Data\Plugins\LeapCSharp.dll:LeapCSharp.dll (00007FFC49CB0000), size: 180224 (result: 0), SymType: '-exported-', PDB: 'C:\Users\Seth\Desktop\Unity\LetsGoAgain\Tests\05_20_Data\Plugins\LeapCSharp.dll', fileVersion: 2.2.4.0
+C:\windows\SYSTEM32\MSVCP120.dll:MSVCP120.dll (00007FFC48780000), size: 679936 (result: 0), SymType: '-exported-', PDB: 'C:\windows\SYSTEM32\MSVCP120.dll', fileVersion: 12.0.21005.1
+C:\windows\SYSTEM32\MSVCR120.dll:MSVCR120.dll (00007FFC48690000), size: 978944 (result: 0), SymType: '-exported-', PDB: 'C:\windows\SYSTEM32\MSVCR120.dll', fileVersion: 12.0.21005.1
+C:\Users\Seth\Desktop\Unity\LetsGoAgain\Tests\05_20_Data\Plugins\Leap.dll:Leap.dll (00007FFC49B40000), size: 1474560 (result: 0), SymType: '-exported-', PDB: 'C:\Users\Seth\Desktop\Unity\LetsGoAgain\Tests\05_20_Data\Plugins\Leap.dll', fileVersion: 2.2.4.0
+C:\Users\Seth\Desktop\Unity\LetsGoAgain\Tests\05_20_Data\Plugins\OculusPlugin.dll:OculusPlugin.dll (00007FFC49A80000), size: 761856 (result: 0), SymType: '-exported-', PDB: 'C:\Users\Seth\Desktop\Unity\LetsGoAgain\Tests\05_20_Data\Plugins\OculusPlugin.dll'
+C:\windows\SYSTEM32\dbghelp.dll:dbghelp.dll (00007FFC47F60000), size: 1605632 (result: 0), SymType: '-exported-', PDB: 'C:\windows\SYSTEM32\dbghelp.dll', fileVersion: 6.3.9600.16520
+C:\windows\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.9600.17031_none_6242a4b3ecbb55a1\comctl32.dll:comctl32.dll (00007FFC505B0000), size: 2465792 (result: 0), SymType: '-exported-', PDB: 'C:\windows\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.9600.17031_none_6242a4b3ecbb55a1\comctl32.dll', fileVersion: 6.10.9600.17031
+C:\windows\SYSTEM32\ntmarta.dll:ntmarta.dll (00007FFC50CA0000), size: 196608 (result: 0), SymType: '-exported-', PDB: 'C:\windows\SYSTEM32\ntmarta.dll', fileVersion: 6.3.9600.16384
+C:\windows\SYSTEM32\Xinput9_1_0.dll:Xinput9_1_0.dll (00007FFC49A70000), size: 32768 (result: 0), SymType: '-exported-', PDB: 'C:\windows\SYSTEM32\Xinput9_1_0.dll', fileVersion: 6.3.9600.16384
+C:\windows\SYSTEM32\XInput1_4.dll:XInput1_4.dll (00007FFC49A60000), size: 53248 (result: 0), SymType: '-exported-', PDB: 'C:\windows\SYSTEM32\XInput1_4.dll', fileVersion: 6.3.9600.16384
+C:\windows\SYSTEM32\SspiCli.dll:SspiCli.dll (00007FFC529B0000), size: 176128 (result: 0), SymType: '-exported-', PDB: 'C:\windows\SYSTEM32\SspiCli.dll', fileVersion: 6.3.9600.16408
+
+========== OUTPUTING STACK TRACE ==================
+
+00007FF72F8F44A6 (05_20) Thread::GetPriority
+00007FF72F8F4AD8 (05_20) Thread::GetPriority
+00007FF72F8F31EB (05_20) Thread::GetPriority
+00007FF72F762882 (05_20) RectT<int>::GetBottom
+00007FF72F35FB6F (05_20) JobQueue::GetThreadCount
+00007FF72F245BF1 (05_20) JobQueue::Exec
+00007FF72F24618B (05_20) JobQueue::ExecuteOneJob
+00007FF72F36A35B (05_20) JobQueue::GetThreadCount
+00007FF72F1B17CE (05_20) UserList::AddUser
+00007FF72F26F67D (05_20) PlayerMainWndProc
+00007FF72F27207C (05_20) PlayerWinMain
+00007FF72F644878 (05_20) RectT<int>::GetBottom
+00007FFC54E116AD (KERNEL32) BaseThreadInitThunk
+00007FFC558A4409 (ntdll) RtlUserThreadStart
+
+========== END OF STACKTRACE ===========
+
+**** Crash! ****

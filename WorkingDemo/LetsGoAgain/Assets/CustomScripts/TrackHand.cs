@@ -7,14 +7,13 @@ using UnityEngine.UI;
 public class TrackHand {
 
 		public GameObject parent = new GameObject ();	
-
 		public GameObject referenceHand = GameObject.CreatePrimitive(PrimitiveType.Sphere);
 		Transform[] grabbableList;
-		List<Transform> grabList = null; // = new List<Transform[]>();
+		List<Transform> grabList = null;
 		List<Transform> grabListParent = null;
 		float maxConnectingDistance = 0.33f;
 		float timeNow = -1;
-		float lastPinch = 0.0f; // the pinch of the previous frame
+		float lastPinch = 0.0f;
 		static float currentFrame = -1;
 		Transform thumb;
 		Transform indexFinger;
@@ -22,24 +21,24 @@ public class TrackHand {
 		public float pinchOpenLimit;
 		public float grabTimerLength;
 		Vector3 prevPos = Vector3.zero;
-	//		Hand leapHand;
 
 		public TrackHand(GameObject rigidHand, Transform thumbObj, Transform indexFingerObj){
 			referenceHand.transform.parent = parent.transform;
-//			parent.tag = "HandParent";	
-
 			referenceHand.tag = "Hand";
 			referenceHand.GetComponent<Renderer>().material.color = Color.grey;
 			referenceHand.GetComponent<Collider>().enabled = false;
 			referenceHand.AddComponent<ReferenceHand>().rigidHand = rigidHand;
+			Shader shader = Shader.Find ("Specular");
+			referenceHand.GetComponent<MeshRenderer>().material = new Material(shader);
 			thumb = thumbObj;
 			indexFinger = indexFingerObj;
 			pinchCloseLimit = float.Parse(GameObject.Find ("CloseStrValue").GetComponent<Text> ().text.ToString ());
 			pinchOpenLimit  = float.Parse(GameObject.Find ("OpenStrValue").GetComponent<Text> ().text.ToString ());
 			grabTimerLength = float.Parse(GameObject.Find ("TimerLenValue").GetComponent<Text> ().text.ToString ());
-			//Debug.Log (grabTimerLength);
 	}
 
+		// Determines which grabbing function to use based on pre-selected values (ie the boolean values in
+	    // the grabTechnique gameobject)
 		public void trackHand(float pinch){
 			GameObject grabTechnique = GameObject.Find("GrabTechnique");
 			bool useToggleGrab = grabTechnique.GetComponent<GrabTechniqueDecider>().toggleGrab;
@@ -67,6 +66,8 @@ public class TrackHand {
 
 		}	
 
+		// Eliminates the link between grabbed object and grabbing hand and
+	    // returns the grabbed object to its orignial parent 
 		public void unparentObject(){
 			prevPos = Vector3.zero;
 			Transform tempObj;
@@ -75,14 +76,6 @@ public class TrackHand {
 				for(int j = 0; j<grabList.Count; j++){
 					if(tempObj == grabList[j]){
 						if(tempObj == referenceHand.GetComponent<ReferenceHand>().pairedObj){
-							Debug.Log ("Yeah, that's right");						
-						}
-						else{
-							Debug.Log("No, that's not what we're looking for");
-							Debug.Log (referenceHand.GetComponent<ReferenceHand>().pairedObj.ToString());
-						}
-						if(grabListParent[j] == referenceHand.GetComponent<ReferenceHand>().childsParent){
-							Debug.Log("right parent");
 						}
 						tempObj.parent = grabListParent[j];
 						referenceHand.GetComponent<ReferenceHand>().childsParent = null;
@@ -92,13 +85,10 @@ public class TrackHand {
 			}
 		}
 
-	public void startPinch(){
-
-	}
-
+	// Does the calculation for the "gaping grab" (pinch and hold) technique for secondary hand when the primary hand 
+	// already has attached to an object
 	public void twoHandedGapingPinch(){
 		float pinch = getPinchStr();
-		//Transform obj = getWithinRangeObject ();
 		bool systemOn = GameObject.Find ("TwoHandedUse").GetComponent<TwoHandedUse> ().systemOn;
 		//if hand open, disconnect
 		if(pinch > pinchCloseLimit){
@@ -107,11 +97,6 @@ public class TrackHand {
 				timeNow = -1;
 				referenceHand.GetComponent<ReferenceHand>().isCounting = false;
 				if(pinch<pinchOpenLimit && systemOn == true){
-//					referenceHand.renderer.material.color = Color.green;
-//					referenceHand.transform.GetChild(0).gameObject.renderer.material.color = Color.green;
-				}
-				else if(systemOn == false){
-//					referenceHand.GetComponent<ReferenceHand>().pairedObj = null;
 				}
 			}
 			else{
@@ -122,30 +107,13 @@ public class TrackHand {
 				else{
 					float timeElasped = Time.realtimeSinceStartup - timeNow;
 					if(timeElasped >= grabTimerLength){
-//						unparentObject();
 						timeNow = -1;
 						referenceHand.GetComponent<ReferenceHand>().isCounting = false;
 						GameObject.Find ("TwoHandedUse").GetComponent<TwoHandedUse> ().systemOn = false;
-//						referenceHand.GetComponent<ReferenceHand>().pairedObj = null;
-						
-					}
-					else{
-//						float percentageComplete =(timeElasped/grabTimerLength);
-						// Green(0,1,0,1)
-						// Red  (1,0,0,0)
-//						referenceHand.GetComponent<ReferenceHand>().pairedObj.gameObject.renderer.material.color = new Color(percentageComplete, 1-percentageComplete, 0);
-//						referenceHand.renderer.material.color = new Color(percentageComplete, 1-percentageComplete, 0);
-						
 					}
 				}
 			}
 		}
-		//else if(obj == null){
-		//	timeNow = -1;
-//			referenceHand.GetComponent<ReferenceHand>().isCounting = false;
-//			referenceHand.GetComponent<ReferenceHand>().pairedObj = null;
-			
-		//}
 		//if hand closed, start timer
 		else{
 			if(systemOn == false){
@@ -153,7 +121,6 @@ public class TrackHand {
 					if(lastPinch > pinchCloseLimit){
 						timeNow = Time.realtimeSinceStartup;
 						referenceHand.GetComponent<ReferenceHand>().isCounting = true;
-//						referenceHand.GetComponent<ReferenceHand>().pairedObj = obj;
 					}
 				}
 				else{
@@ -163,18 +130,6 @@ public class TrackHand {
 						timeNow = -1;
 						referenceHand.GetComponent<ReferenceHand>().isCounting = false;
 						GameObject.Find ("TwoHandedUse").GetComponent<TwoHandedUse> ().systemOn = true;
-//						referenceHand.GetComponent<ReferenceHand>().childsParent = obj.parent;
-//						obj.parent = referenceHand.transform;
-//						obj.gameObject.renderer.material.color = Color.green;
-//						referenceHand.renderer.material.color = Color.green;
-					}
-					else{
-//						float percentageComplete =(timeElasped/grabTimerLength);
-						// Green(0,1,0,1)
-						// Red  (1,0,0,0)
-//						obj.gameObject.renderer.material.color = new Color((1-percentageComplete), percentageComplete, 0);
-//						referenceHand.renderer.material.color = new Color((1-percentageComplete), percentageComplete, 0);
-						//						Debug.Log(referenceHand.renderer.material.color);
 					}
 				}
 			}
@@ -185,12 +140,11 @@ public class TrackHand {
 
 
 
-
+	// Does calculation for the "gaping pinch" (pinch and hold) and is the primary and best pinch available 
 	public void gapingPinch(){
 		float pinch = getPinchStr();
 		Transform obj = getWithinRangeObject ();
 		bool connected = (parent.transform.childCount == 1) ? false : true; 
-//		Debug.Log (connected);
 		//if hand open, disconnect
 		if(pinch > pinchCloseLimit){
 			// reset timer
@@ -221,11 +175,6 @@ public class TrackHand {
 					}
 					else{
 						float percentageComplete =(timeElasped/grabTimerLength);
-						// Green(0,1,0,1)
-						// Red  (1,0,0,0)
-						Debug.Log (referenceHand);
-						Debug.Log (referenceHand.GetComponent<ReferenceHand>());
-						Debug.Log (referenceHand.GetComponent<ReferenceHand>().pairedObj);
 						referenceHand.GetComponent<ReferenceHand>().pairedObj.gameObject.GetComponent<Renderer>().material.color = new Color(percentageComplete, 1-percentageComplete, 0);
 						referenceHand.GetComponent<Renderer>().material.color = new Color(percentageComplete, 1-percentageComplete, 0);
 
@@ -244,7 +193,6 @@ public class TrackHand {
 			if(connected == false){
 				if(timeNow == -1){
 					if(lastPinch > pinchCloseLimit){
-						Debug.Log ("Thus?");
 						timeNow = Time.realtimeSinceStartup;
 						referenceHand.GetComponent<ReferenceHand>().isCounting = true;
 						referenceHand.GetComponent<ReferenceHand>().pairedObj = obj;
@@ -263,11 +211,8 @@ public class TrackHand {
 					}
 					else{
 						float percentageComplete =(timeElasped/grabTimerLength);
-						// Green(0,1,0,1)
-						// Red  (1,0,0,0)
 						obj.gameObject.GetComponent<Renderer>().material.color = new Color((1-percentageComplete), percentageComplete, 0);
 						referenceHand.GetComponent<Renderer>().material.color = new Color((1-percentageComplete), percentageComplete, 0);
-//						Debug.Log(referenceHand.renderer.material.color);
 					}
 				}
 			}
@@ -275,20 +220,16 @@ public class TrackHand {
 		lastPinch = pinch;
 	}
 
-//		public void parentObj(Transform obj){
-//			timeNow = -1;
-//			referenceHand.GetComponent<ReferenceHand>().childsParent = obj.parent;
-//			obj.parent = referenceHand.transform;
-//
-//		}
-
-		public float getPinchStr(){
+	// Calculates the pinch strength instead of using the Leap Motion API's.
+	// Updates on-screen text with the updated pinch value
+	public float getPinchStr(){
 			float pinchStr = Vector3.Distance (thumb.position, indexFinger.position);
 			Text text 	= GameObject.Find ("PinchStrengthValue").GetComponent<Text>();
 			text.text   = pinchStr.ToString("F3"); 
 			return pinchStr;
-		}
+	}
 
+	// Does calculation for outdated pinch technique
 		public void pinchHold(float pinch){
 			Transform obj = getWithinRangeObject ();
 			bool connected = (referenceHand.transform.childCount == 0) ? false : true; 
@@ -328,7 +269,8 @@ public class TrackHand {
 			lastPinch = pinch;
 		}
 		
-		public void holdToggle(float pinch){
+	// Does calculation for outdated pinch technique
+	public void holdToggle(float pinch){
 			Transform obj = getWithinRangeObject ();
 			// if hand open, reset
 			if(pinch < 0.7f || obj == null){
@@ -362,22 +304,13 @@ public class TrackHand {
 		}
 
 
-
-		public void reparentObjects(){
-			for(int i = 0; i<grabList.Count; i++){
-				if(grabList[i].parent != grabListParent[i] || grabList[i].parent.tag != "HandParent"){
-					grabList[i].parent = grabListParent[i];
-				}
-			}
-		}
-
+		// Takes in data from the physical hand and updates tracking infcrmation 
 		public void update(GameObject palm, float frameID){
 			updateFrame (frameID);
 			updatePosition(palm);
-			//reparentObjects();
 		}
 
-
+		// Adds a gameobject to the llist of objects which can be considered grabbable by the application
 		public void addGrabbableObject(Transform obj){
 			if (grabList == null) {
 				grabList = new List<Transform>();
@@ -392,6 +325,8 @@ public class TrackHand {
 			parent.name = name + "_parent";
 		}	
 
+		// Returns True if a hand attached an object will apply tranlational effects to the object, else False
+		// It will return False if not attached to an object or if currently applying rotational or scaling effects
 		public bool moveObject(){
 			GameObject twoHanded = GameObject.Find("TwoHandedUse");
 			bool useTwoHanded = twoHanded.GetComponent<TwoHandedUse>().useTwoHanded;
@@ -401,9 +336,6 @@ public class TrackHand {
 				hasClosestHand  = twoHanded.GetComponent<TwoHandedUse>().closestHand != null;
 				hasGrabbingObj  = twoHanded.GetComponent<TwoHandedUse>().grabbingObj != null;
 			}
-			Debug.Log("useTwoHanded: " + useTwoHanded.ToString());
-			Debug.Log("hasClosestHand: " + hasClosestHand.ToString());
-			Debug.Log("hasGrabbingObj: " + hasGrabbingObj.ToString());
 			if ((useTwoHanded && hasClosestHand && hasGrabbingObj) == false) {
 				return true;
 			}
@@ -411,11 +343,13 @@ public class TrackHand {
 				return false;
 			}
 		}
-
+	
 		public void setSize(Vector3 dimensions){
 			referenceHand.transform.localScale = (new Vector3 (dimensions.x, dimensions.y, dimensions.z));
 		}
 
+		// Applies positional updates to the referenceHand and to it attached object (if currently applying translational
+		// transformation)
 		public void updatePosition(GameObject palm){
 			Vector3 palmPos = palm.transform.position;
 			referenceHand.transform.position = palmPos;
@@ -428,9 +362,9 @@ public class TrackHand {
 				referenceHand.GetComponent<ReferenceHand>().pairedObj.transform.position = new Vector3(objOldPos.x + changeInPos.x, objOldPos.y + changeInPos.y, objOldPos.z + changeInPos.z);
 			}
 			prevPos = referenceHand.transform.position;
-		//Debug.Log (palm.name);
 	}
 
+		// Returns the closest grabbable object to the hand within a threshhold
 		public Transform getWithinRangeObject(){
 			if (grabList != null) {
 				List<Transform> canGrabList = new List<Transform>();
@@ -464,7 +398,8 @@ public class TrackHand {
 				return null;
 			}
 		}
-		
+
+	// calls the colorObjs() once per frame (not once per hand per frame)
 	public void updateFrame(float frameID){
 		if (currentFrame != frameID) {
 			currentFrame = frameID;
@@ -472,6 +407,8 @@ public class TrackHand {
 		}
 
 	}
+
+	// Updates the colors of hands and grabbable objects based on their position and activity 
 	public void colorObjs(){
 
 		List<Transform> occupiedGrabbableObjs = new List<Transform> ();
@@ -482,7 +419,6 @@ public class TrackHand {
 				hand.GetComponent<Renderer>().material.color = Color.gray;
 			}
 		    if(hand == twoHandedUse.GetComponent<TwoHandedUse>().closestHand){
-				Debug.Log(hand.name);
 				hand.GetComponent<Renderer>().material.color = Color.blue;
 			}
 			if(hand.GetComponent<ReferenceHand>().pairedObj != null){
@@ -513,7 +449,6 @@ public class TrackHand {
 		Color objColor;
 		int colorIndex = 0;
 		Color[] colors = {Color.red, Color.blue, Color.cyan, Color.magenta};
-//		Debug.Log (hands.Count);
 		for (int i = 0; i<hands.Count; i++) {
 			for(int j = 0; j<colorableList.Count; j++){
 				distFromHand[j] = Vector3.Distance(hands[i].transform.position, colorableList[j].position);
@@ -525,7 +460,6 @@ public class TrackHand {
 				}
 			}
 			closestObj = colorableList[closestIndex];
-//			Debug.Log (distFromHand [closestIndex].ToString() + " <= " + maxConnectingDistance.ToString() + " ?");
 			if (distFromHand [closestIndex] <= maxConnectingDistance) {
 				objColor = closestObj.gameObject.GetComponent<Renderer>().material.color;
 				if(objColor == Color.grey){
@@ -544,17 +478,5 @@ public class TrackHand {
 
 
 	}
-
-	// Use this for initialization
-	void Start () {
-	}
 	
-	// Update is called once per frame
-	void Update () {
-	}
-
 }
-
-
-
-// each frame, check the cloest objs to the hands and color them

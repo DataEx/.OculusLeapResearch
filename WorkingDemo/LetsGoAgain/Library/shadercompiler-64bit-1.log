@@ -1,6 +1,9 @@
 Base path: C:/Program Files/Unity5/Editor/Data
-Pipe name: \\.\pipe\UnityShaderCompiler-64bit-1-31576
+Pipe name: \\.\pipe\UnityShaderCompiler-64bit-1-19416
 Cmd: getPlatforms
+Cmd: compileSnippet
+  error: 2 plat 0 at (123): 'gl_' : reserved built-in name\nCompiling Vertex program
+  api=0 type=0 insize=7419 outsize=0 kw= ok=0
 Cmd: compileSnippet
   error: 2 plat 0 at (123): 'gl_' : reserved built-in name\nCompiling Vertex program
   api=0 type=0 insize=7419 outsize=0 kw= ok=0

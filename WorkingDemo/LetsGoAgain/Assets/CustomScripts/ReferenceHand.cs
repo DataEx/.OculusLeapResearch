@@ -11,21 +11,18 @@ public class ReferenceHand : MonoBehaviour {
 	public Transform pairedObj = null;
 	public bool isCounting = false;
 	public Timers timer;
-///	public Tranform attachedObj; 
-	// Use this for initialization
+
 	void Awake () {
 		float timerLength = float.Parse(GameObject.Find ("TimerLenValue").GetComponent<Text> ().text.ToString ());
 		timer = new Timers (this.gameObject,timerLength,0.6f);
 	}
-	
-	// Update is called once per frame
+
+	// Uses data from the grasping functions in TrackHand.cs to determine whether to use the timer  
 	void Update () {
 		if (isCounting == true) {
-//			print ("START");
 			timer.startTimer();
 		}
 		else{
-//			print ("STOP");
 			timer.stopTimer();
 		}
 		timer.updateObj ();
@@ -37,9 +34,5 @@ public class ReferenceHand : MonoBehaviour {
 			Destroy(timer.targetCopy);
 		}
 
-	}
-
-	void onDestroy(){
-		//Destroy (this.gameObject.GetComponent<ObjectTimer> ());
 	}
 }

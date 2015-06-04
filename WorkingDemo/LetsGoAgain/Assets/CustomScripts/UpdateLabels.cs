@@ -10,7 +10,8 @@ public class UpdateLabels : MonoBehaviour {
 	public Text currentHandStr;
 	public int currentPointerIndex; 
 	Text[] values;
-	// Use this for initialization
+
+	// Assign starting values for user-changable variables to class variables
 	void Start () {
 		values = new Text[] {openHandStr, closeHandStr, timerValue, currentHandStr};
 		for(int i=0; i<this.transform.childCount; i++){
@@ -32,7 +33,7 @@ public class UpdateLabels : MonoBehaviour {
 		values[currentPointerIndex].transform.GetChild(0).GetComponent<Text>().fontStyle = FontStyle.Italic;
 	}
 	
-	// Update is called once per frame
+	// Allows user to change value of on-screen variables by useing "/", ",", "." keys
 	void Update () {
 		if (Input.GetKeyDown(KeyCode.Slash)){
 			values[currentPointerIndex].transform.GetChild(0).GetComponent<Text>().fontStyle = FontStyle.Bold;
@@ -88,7 +89,4 @@ public class UpdateLabels : MonoBehaviour {
 		}
 	}
 
-	void updateText(){
-
-	}
 }

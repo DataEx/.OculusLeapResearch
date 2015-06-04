@@ -6,20 +6,17 @@
 
 using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 using Leap;
 
 // The model for our rigid hand made out of various polyhedra.
 public class RigidHand : SkeletalHand {
 
-	//	
 	public TrackHand tracker;
-	//
-
 
   public float filtering = 0.5f;
 
   void Start() {
-	//
 		Transform rigidHand = this.gameObject.transform;	 
 		Transform indexFinger = null;
 		Transform thumb = null;
@@ -45,43 +42,30 @@ public class RigidHand : SkeletalHand {
 		
 		tracker = new TrackHand (this.gameObject, thumb, indexFinger);
 
-		Transform  cube1 = GameObject.Find ("Cube1").transform;
-		Transform  cube2 = GameObject.Find ("Cube2").transform;
-		Transform  cube3 = GameObject.Find ("Cube3").transform;
-		
-		tracker.addGrabbableObject(cube1);
-		tracker.addGrabbableObject(cube2);
-		tracker.addGrabbableObject(cube3);
-		
+		GameObject grabTechniqueObject = GameObject.Find ("GrabTechnique");
+		List<GameObject> grabbableObjects = grabTechniqueObject.GetComponent<GrabTechniqueDecider> ().GrabbableObjects;
+		for (int i = 0; i<grabbableObjects.Count; i++) {
+			tracker.addGrabbableObject(grabbableObjects[i].transform);
+		}
+
 		tracker.setName ((hand.Id).ToString ());
 		tracker.setSize(new Vector3 (0.08f, 0.08f, 0.08f));
-		palm.GetComponent<Collider>().enabled = false; // is this necessary?
+		palm.GetComponent<Collider>().enabled = false;
 
-	//
+		palm.GetComponent<Rigidbody>().maxAngularVelocity = Mathf.Infinity;
+		Leap.Utils.IgnoreCollisions(gameObject, gameObject);
 
-    palm.GetComponent<Rigidbody>().maxAngularVelocity = Mathf.Infinity;
-    Leap.Utils.IgnoreCollisions(gameObject, gameObject);
-  }
-	//
+	}
+
+	// Each frame, data from the Leap Motion API is sent over
 	void Update(){
-
 		Hand hand = GetLeapHand();
 		float frameID = hand.Frame.Id;
 		float pinch = hand.PinchStrength;
 		
 		tracker.trackHand(pinch);
 		tracker.update (palm, frameID);
-//		tracker.updateFrame (frameID);
-//		tracker.updatePosition (palm);
-
-		//print (hand.Frame.Id);	
-		//print (Vector3.Distance (palm.transform.position, tracker.referenceHand.transform.position));
-		
-		//	Text text 	= GameObject.Find ("PinchStrengthText").GetComponent<Text>();
-		//	text.text = "Pinch Str: " + pinch.ToString (); 
 	}
-	//
-
 
   public override void InitHand() {
     base.InitHand();
